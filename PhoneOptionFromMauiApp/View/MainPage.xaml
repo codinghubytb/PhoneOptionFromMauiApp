@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PhoneOptionFromMauiApp.View.MainPage"
+             xmlns:viewModel="clr-namespace:PhoneOptionFromMauiApp.ViewModel"
+             xmlns:templates="clr-namespace:PhoneOptionFromMauiApp.Templates"
+             x:DataType="viewModel:MainViewModel">
+
+    <Grid RowDefinitions="Auto,Auto"
+          ColumnDefinitions="Auto,Auto,Auto"
+          Margin="10">
+
+        <templates:FrameModel 
+            Text="Text 1"
+            Source="dotnet_bot"
+            CommandFrame="{Binding Source={RelativeSource AncestorType={x:Type viewModel:MainViewModel}}, Path=ClickFrameCommand}"/>
+
+        <templates:FrameModel 
+            Grid.Column="1"
+            Text="Text 2"
+            Source="dotnet_bot"
+            CommandFrame="{Binding Source={RelativeSource AncestorType={x:Type viewModel:MainViewModel}}, Path=ClickFrameCommand}"/>
+
+        <templates:FrameModel 
+            Grid.Column="2"
+            Text="Text 3"
+            Source="dotnet_bot"
+            CommandFrame="{Binding Source={RelativeSource AncestorType={x:Type viewModel:MainViewModel}}, Path=ClickFrameCommand}"/>
+
+    </Grid>
+
+</ContentPage>
